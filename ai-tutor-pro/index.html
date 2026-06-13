@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tutor Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://rsms.me/inter/inter.css');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      @keyframes pulse {
+        0%, 100% {
+          box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+        }
+      }
+      .pulse-glow {
+        animation: pulse 2s infinite;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.16.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "pdfjs-dist": "https://aistudiocdn.com/pdfjs-dist@^4.4.168"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-50 dark:bg-black text-slate-800 dark:text-slate-300">
+    <div id="root"></div>
+    <script>
+      window.pdfjsWorker = "https://aistudiocdn.com/pdfjs-dist@^4.4.168/build/pdf.worker.mjs";
+    </script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "AI Tutor Pro",
+  "description": "An adaptive learning platform that provides step-by-step tutoring in complex subjects like calculus and programming. It uses AI to generate lessons, create quizzes, and suggest next topics based on your performance.",
+  "requestFramePermissions": []
+}
