@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PitchCraft AI | Your Professional Pitch Generator</title>
+    
+    <!-- Professional Fonts from Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons from Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Your Stylesheet -->
+    <link rel="stylesheet" href="/static/style.css">
+    
+    <!-- Markdown Parser -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- ================================================== -->
+        <!-- MAIN CONTENT (LEFT COLUMN) -->
+        <!-- ================================================== -->
+        <main class="main-content">
+            <header>
+                <div class="header-content">
+                    <h1>🚀 PitchCraft AI</h1>
+                    <p>Generate your next game-changing business pitch with the power of AI.</p>
+                </div>
+                <!-- THEME SWITCHER TOGGLE -->
+                <div class="theme-switcher">
+                    <label for="theme-toggle">
+                        <i class="fas fa-moon"></i>
+                        <i class="fas fa-sun"></i>
+                    </label>
+                    <input type="checkbox" id="theme-toggle">
+                </div>
+            </header>
+            
+            <section class="input-section">
+                <textarea id="idea-input" placeholder="Enter your startup idea here...&#10;- e.g., A smart coffee mug that keeps beverages at the perfect temperature.&#10;- Syncs with a mobile app for temperature control and presets."></textarea>
+            </section>
+
+            <section class="controls-container">
+                <fieldset>
+                    <legend>✨ Customize Your Pitch</legend>
+                    <div class="control-group-row">
+                        <div class="control-group">
+                            <label for="tone-select">Tone of Voice</label>
+                            <select id="tone-select">
+                                <option value="Professional" selected>Professional</option>
+                                <option value="Witty & Engaging">Witty & Engaging</option>
+                                <option value="Bold & Confident">Bold & Confident</option>
+                                <option value="Inspirational">Inspirational</option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="audience-select">Target Audience</label>
+                            <select id="audience-select">
+                                <option value="Venture Capitalists and Investors" selected>Investors</option>
+                                <option value="First-Time Customers">Customers</option>
+                                <option value="A General Audience">General Audience</option>
+                            </select>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset id="sections-fieldset">
+                    <legend>Include Sections</legend>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="include-pitch" value="elevator_pitch" checked><label for="include-pitch">Elevator Pitch</label>
+                        <input type="checkbox" id="include-bullets" value="slide_bullets" checked><label for="include-bullets">Slide Bullets</label>
+                        <input type="checkbox" id="include-tagline" value="tagline" checked><label for="include-tagline">Tagline</label>
+                        <input type="checkbox" id="include-value-prop" value="value_proposition" checked><label for="include-value-prop">Value Proposition</label>
+                        <input type="checkbox" id="include-competitors" value="competitors" checked><label for="include-competitors">Competitors</label>
+                        <input type="checkbox" id="include-revenue" value="revenue_models" checked><label for="include-revenue">Revenue Models</label>
+                        <input type="checkbox" id="include-swot" value="swot_analysis"><label for="include-swot">🌟 SWOT Analysis</label>
+                    </div>
+                </fieldset>
+            </section>
+
+            <button id="generate-btn">
+                <span class="btn-text">Generate Pitch</span>
+                <span class="btn-loader"></span>
+            </button>
+            
+            <div id="result-container">
+                <div class="placeholder">Your masterpiece will appear here...</div>
+            </div>
+        </main>
+
+        <!-- ================================================== -->
+        <!-- SLIDABLE SIDEBAR ELEMENTS -->
+        <!-- ================================================== -->
+        <button id="history-toggle-btn" title="Toggle History Panel">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <aside class="history-sidebar">
+            <div class="history-header">
+                <h2><i class="fas fa-history"></i> Generation History</h2>
+                <button id="clear-history-btn" title="Clear all history">
+                    <i class="fas fa-trash-alt"></i> Clear All
+                </button>
+            </div>
+            <ul id="history-list">
+                <!-- History items will be injected here by JavaScript -->
+            </ul>
+        </aside>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
