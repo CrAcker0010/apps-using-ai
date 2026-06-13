@@ -1,0 +1,5 @@
+{
+  "name": "AI Pitch Generator",
+  "description": "An AI-driven application that generates comprehensive business pitches from a simple idea using Google's Gemini API.",
+  "requestFramePermissions": []
+}
